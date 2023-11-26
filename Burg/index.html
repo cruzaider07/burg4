@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Dev">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burg</title>
+    <link rel="icon" href="img/logo_orange.ico">
+    <link rel="stylesheet" href="static/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    
+    <nav>
+        <a class="logo-container" href="index.html">
+            <span class="material-symbols-outlined logo">
+                lunch_dining
+            </span>
+        </a>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="#food">Menu</a></li>
+            <li><a href="#contact">Contact</a></li>
+            <li><a href="#about">About</a></li>
+        </ul>
+        <a class="signup" href="signup.html">Sign Up</a>
+    </nav>
+
+    <main>
+
+        <!--SECTION -->
+
+        <section class="section" id="home">
+            <div class="section__div">
+                <h1 class="section__h1">Burg</h1>
+                <p class="section__p">
+                    <span class="nowrap">Go take a break about your exhausting daily activities and obligations and have some relaxing time with our</span>
+                    <span class="section__p__span1 nowrap">Delicious and Mouth-Watering Burger</span> 
+                </p>
+            </div>
+
+            <a class="order" id="order" href="#food">Order</a>
+        </section>
+
+        <!--SECTION 1 -->
+
+        <section class="section1" id="food">
+            <div class="section1__row row">
+                <div class="section1__col col">
+                    <img class="section1__img" src="img/burger2.png" alt="">
+                    <p class="section1__p">Meaty-Cheezy Burger</p>
+                    <span class="price">$4</span>
+                    <div class="input-container">
+                        <span class="material-symbols-outlined remove" onclick="decrement(this)">remove</span>
+                        <div class="item_no__container" id="item_no__container">
+                            <!-- <input class="item_no"
+                                id="item_no" 
+                                type="number"
+                                min="0"
+                                max="99"
+                                value="0"
+                                data-color="orange"> -->
+                                <span class="item_no" id="item_no">0</span>
+                        </div>
+                        <span class="material-symbols-outlined add" onclick="increment(this)">add</span>
+                    </div>
+                </div>
+                
+                <div class="section1__col col">
+                    <img class="section1__img" src="img/burger1.png" alt="">
+                    <p class="section1__p">Bacon-Layered Burger</p>
+                    <span class="price">$4</span>
+                    <div class="input-container">
+                        <span class="material-symbols-outlined remove" onclick="decrement(this)">remove</span>
+                        <div class="item_no__container" id="item_no__container">
+                            <!-- <input class="item_no"
+                                id="item_no" 
+                                type="number"
+                                min="0"
+                                max="99"
+                                value="0"
+                                data-color="orange"> -->
+                                <span class="item_no item_no_1" id="item_no">0</span>
+                        </div>
+                        <span class="material-symbols-outlined add" onclick="increment(this)">add</span>
+                    </div>
+                </div>
+
+                <div class="section1__col col">
+                    <img class="section1__img" src="img/burger3.png" alt="">
+                    <p class="section1__p">Crispy-Layered Burger</p>
+                    <span class="price">$4</span>
+                    <div class="input-container">
+                        <span class="material-symbols-outlined remove" onclick="decrement(this)">remove</span>
+                        <div class="item_no__container" id="item_no__container">
+                            <!-- <input class="item_no"
+                                id="item_no" 
+                                type="number"
+                                min="0"
+                                max="99"
+                                value="0"
+                                data-color="orange"> -->
+                                <span class="item_no" id="item_no">0</span>
+                        </div>
+                        <span class="material-symbols-outlined add" onclick="increment(this)">add</span>
+                    </div>
+                </div>
+
+                <a href="ordered.html"><span class="material-symbols-outlined add-to-cart">
+                    add_shopping_cart
+                </span>
+                </a>
+            
+        </section>
+
+        <!--SECTION 2 -->
+        
+
+        <section class="section2" id="contact">
+            <h1>Contact <span class="us">Us</span></h1>
+            <article class="section2-article">
+                <div class="section2__div fieldset-container">
+                    <form>
+                        <p class="section2__p">
+                            <label class="contact-label" for="name">Name:</label>
+                            <input class="contact-input" type="text" class="name"id="name" placeholder="Type your name here">
+                        </p>
+                        <p class="section2__p">
+                            <label class="contact-label" for="email">Email:</label>
+                            <input class="contact-input" type="email" name="email" id="email" placeholder="Type your email here">
+                        </p>
+                        <p class="section2__p">
+                            <label class="contact-label" for="textarea">Message:</label>
+                            <textarea class="contact-input" name="textarea" id="textarea" cols="30" rows="10" placeholder="Type your message here"></textarea>
+                        </p>
+                        <p class="contact-button-container">
+                            <a class="contact-button" id="contact-button">Submit</a>
+                        </p>
+                    </form>
+                </div>
+
+                <div class="section2__div">
+                    <img class="contact-img" src="img/burger-contact-with-blur.png" alt="">
+                </div>
+            </article>
+
+            <!-- <div class="popup center" id="popup">
+                <span class="material-symbols-outlined">
+                    check_circle
+                </span>
+                Form Submitted!
+            </div> -->
+
+            <!-- <p class="form-submitted" id="form-submitted">
+                <span class="material-symbols-outlined">
+                    check_circle
+                    </span>
+                    Form Submitted!
+            </p> -->
+
+        </section>
+
+
+        <section class="section3" id="about">
+            <h1>About <span class="about__us">Us</span></h1>
+            <article>
+                <div class="img-container">
+                    <img src="img/burger-about1r.png" alt="">
+                </div>
+
+                <div class="p-c">
+                    <p>We are <span class="burg">Burg</span>, founded on 2023 by <span class="dev">Dev</span> from Philippines. We are here to serve you our best burgers recognized 
+                        around the world with branches to almost every country. Burgers made by Burg are made out of the great recipes of Dev's great
+                        ascendants. Our vision is to give you a satisfying feeling with 
+                        our burger made with love, giving you relaxation for your 
+                        welfare on the days you are working with tasks and even on your recreational time. </p>
+                </div>
+            </article>
+        </section>
+    
+    </main>
+
+    <script src="static/script.js"></script>
+
+</body>
+</html>

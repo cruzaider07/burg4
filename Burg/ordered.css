@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Nunito+Sans:opsz@6..12&display=swap');
+
+:root{
+    --ff: 'Nunito Sans', sans-serif;
+    --ff-headings: "Fugaz One", sans-serif;
+    --fs: clamp(1rem, 2.2vh, 1.2rem);
+
+    /* COLOR */
+
+    --color: white;
+    --link-color: white;
+    --link-hover: orange;
+    --border: 2px solid orange;
+    --button-hover: black;
+    --col-bgcolor: orange;
+    --col-bdcolor: rgb(184, 0, 0);
+    --dark-red: rgb(184, 0, 0);
+    --nav-bg-color: rgb(184, 0, 0);
+}
+
+html{
+    scroll-behavior: smooth;
+    font-family: var(--ff);
+    font-size: var(--fs);
+}
+
+body{
+    display: flex;
+    flex-direction: column;
+    background-color: orange;
+}
+
+body h1{
+    text-align: center;
+    letter-spacing: 0.2rem;
+}
+
+.ordered{
+    color: black;
+}
+
+.foods{
+    color: white;
+    text-shadow: 0 0 5px black;
+}
+
+.qty{
+    display: grid;
+    grid-template-columns: 1fr 2.5fr;
+    grid-template-areas: 
+        "img qty";
+    font-size: 1.4rem;
+    margin-top: 2rem;
+}
+
+
+img{
+    grid-area: img;
+    transform: scale(0.8);
+}
+
+article{
+    grid-area: qty;
+    padding: 3rem 10rem 10rem;
+
+}
+
+.price{
+    padding-left: 3rem;
+}
+
+h1{
+    font-size: 3rem;
+}
+
+h2{
+    padding-left: 6.5rem;
+    letter-spacing: 0.15rem;
+    color: var(--dark-red);
+}
+
+.ordered-foods{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+span{
+    font-weight: bold;
+    color: var(--dark-red);
+}
+
+.place{
+    display: flex;
+    justify-content: center;
+}
+
+a{
+    text-align: center;
+    font-weight: bold;
+    color: var(--dark-red);
+    border: 2px solid var(--dark-red);
+    padding: 0.5rem 1rem;
+    border-radius: 1rem;
+    text-decoration: none;
+    transition: 0.5s;
+    background-color: white;
+    margin-top: 3rem;
+}
+
+a:any-link{
+    color: var(--dark-red);
+}
+
+a:hover{
+    background-color: var(--dark-red);
+    color: orange;
+    border: none;
+}
+
+@keyframes show{
+    0%{
+        top: -100px;
+    }
+
+    30%{
+        top: 50%;
+    }
+
+    70%{
+        top: 50%;
+    }
+
+    100%{
+        top: -200px;
+    }
+}
+
+.total{
+    text-align: center;
+    font-weight: bold;
+    font-size: 3rem;
+}
+
+.place{
+    cursor: pointer;
+}
+
+.placed span{
+    transform: scale(2);
+}
+
+.placed{
+    position: absolute;
+    top: -200px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    padding: 0.5rem 2rem 2rem;
+    border: 2px solid var(--dark-red);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 2rem;
+    background: white;
+}
+
